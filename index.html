@@ -46,11 +46,157 @@
         </div>
         <div id="content">
 
+            <!-- About section -->
+            <div class="content-section">
+                <h2 class="section-heading">The Band</h2>
+                <p class="section-subheading">We love music</p>
+                <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                    id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div class="menber-list">
+                    <div class="menber-item">
+                        <p class="menber-name">Name</p>
+                        <img src="./asscets/img/menber/bandmember.jpg" alt="Name" class="menber-img">
+                    </div>
+
+                    <div class="menber-item">
+                        <p class="menber-name">Name</p>
+                        <img src="./asscets/img/menber/bandmember.jpg" alt="Name" class="menber-img">
+                    </div>
+
+                    <div class="menber-item">
+                        <p class="menber-name">Name</p>
+                        <img src="./asscets/img/menber/bandmember.jpg" alt="Name" class="menber-img">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <!-- Tourn section  -->
+            <div class="tour-section">
+                <div class="content-section">
+                    <h2 class="section-heading text-white">TOUR DATES</h2>
+                    <p class="section-subheading text-white">Remember to book your tickets!</p>
+                    <ul class="tickits-list">
+                        <li>Semtember <span class="sold-out"> Sold Out</span></li>
+                        <li>Octeber <span class="sold-out"> Sold Out</li>
+                        <li>Novenber <span class="quantity"> 3</li>
+                    </ul>
+
+                    <!-- places -->
+
+                    <div class="place-list">
+                        <div class="place-item">
+                            <img src="./asscets/img/tour/newyork.jpg" alt="Place" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button  class="place-buy js-buy-ticket" >Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="place-item">
+                            <img src="./asscets/img/tour/newyork.jpg" alt="Place" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-buy js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+
+                        <div class="place-item">
+                            <img src="./asscets/img/tour/newyork.jpg" alt="Place" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button  class="place-buy js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <!-- Contacts section  -->
+            <div class="content-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-subheading">Fan? Drop a note!</p>
+            </div>
         </div>
         <div id="footer">
 
         </div>
     </div>
+
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-contrainer">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+            <header class="modal-header">
+                <i class="icon-heading ti-calendar"></i>
+                Tickets
+            </header>
+
+            <div class="modal-body">
+                <lable for="many" class="modal-lable">
+                    <i class="ti-shopping-cart" phace></i>
+                    Tickets, $15 per person
+                </lable>
+                <input id="many" type="text" class="modal-input" placeholder="How many?">
+
+                <lable for="email" class="modal-lable">
+                    <i class="ti-user"></i>
+                    Send To
+                </lable>
+                <input id="email" type="text" class="modal-input" placeholder="Email">
+
+                <button id="buy-ticket">
+                    Pay <i class="ti-check"></i>
+                </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href=""> Help</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.modal')
+        const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-contrainer')
+
+        function showBuyTickets() {
+            // alert("Show")
+            modal.classList.add('open')
+            // modalClose.classList.remove('open')
+        }
+
+        function closeModal() {
+            modal.classList.remove('open')
+        }
+
+        for(const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets )
+        }
+
+
+        modalClose.addEventListener('click', closeModal)
+
+        modal.addEventListener('click',closeModal)
+
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+    </script>
 
 </body>
 

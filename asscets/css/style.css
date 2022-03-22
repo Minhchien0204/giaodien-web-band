@@ -18,6 +18,17 @@ mau sac
 kieu dang(kieu chu, hinh tron, vuong,...)
  */
 
+
+/* khắc phục lỗi thằng cha không ôn gọn thằng con khi dùng float */
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: white !important;
+}
+
 #main {}
 
 #header {
@@ -140,4 +151,258 @@ kieu dang(kieu chu, hinh tron, vuong,...)
 
 #content {}
 
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    /*thuoc tinh dan cach khoang cach cac chu cai*/
+}
+
+#content .section-subheading {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    /* kieu chu*/
+    opacity: 0.6;
+}
+
+#content .about-text {
+    margin-top: 25px;
+    text-align: justify;
+    /* can deu 2 ben */
+    line-height: 1.4;
+    /* chieu cao cua dong */
+}
+
+#content .menber-list {
+    margin-top: 48px;
+}
+
+#content .menber-item {
+    float: left;
+    /* width: 33.33333%; */
+    width: calc(100%/3);
+    text-align: center;
+}
+
+#content .menber-name {
+    font-size: 15px;
+}
+
+#content .menber-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+
+#content .tour-section {
+    background: black;
+}
+
+.tickits-list {
+    background-color: white;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.tickits-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickits-list .sold-out {
+    background-color: #f44336;
+    color: #ccc;
+    padding: 3px 4px;
+    margin-left: 15px;
+}
+
+.tickits-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+}
+
+.places {}
+
+.place-list {
+    margin-top: 32px;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding-bottom: 48px;
+}
+
+.place-item {
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.7;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy {
+    color: #fff;
+    background-color: black;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.place-buy:hover {
+    color: black;
+    background-color: #757575;
+}
+
 #footer {}
+
+.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    /*nam giua chieu cao cua thang cha*/
+    justify-content: center;
+    /* nam giua chieu ngang cua thang cha*/
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease .7s;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-header {
+    height: 130px;
+    background: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.icon-heading {
+    margin-right: 20px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-lable {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-input {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#buy-ticket {
+    color: #fff;
+    background-color: #009688;
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 16px;
+    cursor: pointer;
+}
+
+#buy-ticket:hover {
+    opacity: 0.8;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-help a {
+    color: #2196F3;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
