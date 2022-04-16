@@ -299,7 +299,7 @@ kieu dang(kieu chu, hinh tron, vuong,...)
 .places {}
 
 .place-list {
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 48px;
 }
 
@@ -356,7 +356,7 @@ kieu dang(kieu chu, hinh tron, vuong,...)
     line-height: 1.4;
 }
 
-.contact-info i[class*="ti-"] {
+.contact-info i {
     width: 30px;
     display: inline-block;
 }
